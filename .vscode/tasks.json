@@ -1,0 +1,37 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "shell",
+            "group": "build",
+            "label": "Odin Build",
+            "command": "./.vscode/build.bat"
+        },
+        {
+            "type": "process",
+            "group": "build",
+            "label": "Odin Build and Run",
+            "command": "bin/release/game.exe",
+            "dependsOn": ["Odin Build"]
+        },
+        {
+            "type": "shell",
+            "group": "build",
+            "label": "Odin Build DEBUG",
+            "command": "./.vscode/build_debug.bat"
+        },
+        {
+            "type": "process",
+            "group": "build",
+            "label": "Odin Build and Run DEBUG",
+            "command": "bin/debug/game.exe",
+            "dependsOn": ["Odin Build DEBUG"]
+        },
+        {
+            "type": "shell",
+            "group": "build",
+            "label": "Clean Odin",
+            "command": "./.vscode/clean.bat",
+        }
+    ]
+}

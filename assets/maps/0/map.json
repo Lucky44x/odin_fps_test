@@ -1,0 +1,135 @@
+{
+    "name": "Test",
+    "skybox": {
+        "cubemap": "texture/skybox.png",
+        "vertex-shader": "material/skybox/skybox.vs",
+        "fragment-shader": "material/skybox/skybox.fs"
+    },
+    "tags": [
+        "SPAWN",
+        "STATIC",
+        "GRND",
+        "WALL"
+    ],
+    "textures": [
+        {
+            "name": "t_bricks",
+            "src": "texture/bricks.png"
+        }
+    ],
+    "materials": [
+        {
+            "name": "m_cube_1",
+            "vertex-shader": "material/cube/shader.vert",
+            "fragment-shader": "material/cube/shader.frag",
+            "texture-maps": [
+                {
+                    "map-index": "DIFFUSE",
+                    "texture": 0,
+                    "color": [ 255, 255, 255, 255 ],
+                    "value": 0
+                }
+            ]
+        }
+    ],
+    "meshes": [
+        {
+            "name": "cube-1",
+            "src": "mesh/cube.obj"
+        },
+        {
+            "name": "grndPlane",
+            "src": "primitive:plane"
+        },
+        {
+            "name": "slope-1",
+            "src": "mesh/slope.obj"
+        },
+        {
+            "name": "cylindr",
+            "src": "primitive:cylinder"
+        }
+    ],
+    "objects": [
+        {
+            "name": "SPAWN",
+            "tags": [0],
+            "pos": [ 0.0, 1.0, 0.0 ],
+            "rot": [ 0.0, 0.0, 0.0 ],
+            "size": [0.0, 0.0, 0.0 ],
+            "collision": false,
+            "mesh": -1,
+            "material": -1
+        },
+        {
+            "name": "REF",
+            "tags": [0],
+            "pos": [ 0.0, 2.0, 0.0 ],
+            "rot": [ 0.0, 0.0, 0.0 ],
+            "size": [0.0, 0.0, 0.0 ],
+            "collision": false,
+            "mesh": -1,
+            "material": -1
+        },
+        {
+            "name": "SCENE_CUBE_1",
+            "tags": [ 1 ],
+            "pos": [ 5.0, 0.0, 0.0 ],
+            "rot": [ 0.0, 45.0, 0.0 ],
+            "size": [ 0.5, 0.5, 0.5 ],
+            "collision": true,
+            "mesh": 0,
+            "material": 0
+        },
+        {
+            "name": "SCENE_CUBE_2",
+            "tags": [ 1 ],
+            "pos": [ 10, 1, 0.0 ],
+            "rot": [ 0.0, 25.0, 0.0 ],
+            "size": [ 1, 1, 1 ],
+            "collision": true,
+            "mesh": 0,
+            "material": 0
+        },
+        {
+            "name": "SCENE_CUBE_3",
+            "tags": [ 1 ],
+            "pos": [ 10, 100, 0.0 ],
+            "rot": [ 0.0, 0.0, 0.0 ],
+            "size": [ 0.5, 0.5, 0.5 ],
+            "collision": true,
+            "mesh": 0,
+            "material": 0
+        },
+        {
+            "name": "SCENE_CUBE_4",
+            "tags": [ 1 ],
+            "pos": [ -5, 0, 0.0 ],
+            "rot": [ 0.0, 0.0, 0.0 ],
+            "size": [ 0.25, 4, 4 ],
+            "collision": true,
+            "mesh": 0,
+            "material": 0
+        },
+        {
+            "name": "SCENE_GROUND",
+            "tags": [ 1, 2 ],
+            "pos": [ 0.0, 0.0, 0.0 ],
+            "rot": [ 0.0, 0.0, 0.0 ],
+            "size": [ 10.0, 10.0, 10.0 ],
+            "collision": true,
+            "mesh": 1,
+            "material": 0
+        },
+        {
+            "name": "SCENE_SLOPE",
+            "tags": [ 1, 2 ],
+            "pos": [ 0.0, 0.0, 4.0 ],
+            "rot": [ 0.0, 0.0, 0.0 ],
+            "size": [ 1.0, 1.0, 1.0 ],
+            "collision": true,
+            "mesh": 2,
+            "material": 0
+        }
+    ]
+}
